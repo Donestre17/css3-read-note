@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input:checked+span {
+            color: deeppink;
+        }
+        input:checked+label {
+            color: deeppink;
+        }
+        input:disabled {
+            color:chocolate
+        }
+        input:enabled {
+            color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" value="这是激活状态的文本框">
+    <br>
+    <input type="text" value="这是禁用状态的文本框" disabled>
+    <br>
+    <input type="checkbox" id="check"> <label for="check">多选按钮</label>
+    <br>
+    <input type="checkbox"> <span>多选按钮</span>
+    <br>
+    <input type="radio"> <span>单选按钮</span>
+    <br>
+    <p>关于兼容性，需要IE9以上版本支持</p>
+</body>
+</html>

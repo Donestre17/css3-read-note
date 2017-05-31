@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>层次选择器</title>
+    <style>
+        /*E F 后代选择器，选择匹配E元素下的F元素*/
+        .far1 div {
+            width: 600px;
+            height: 50px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+        /*E>F 子选择器，匹配E元素下一级的F元素*/
+        .far1 .bro1 {
+            background: cadetblue;
+        }
+        /*E+F 相邻兄弟选择器,匹配E元素后紧跟的F元素*/
+        .bro1+.bro2 {
+            background: darkcyan;
+        }
+        /*E~F 通用兄弟选择器，匹配E元素后所有的F元素  tips：使用这个特性能轻松的实现导航栏等margin效果而不用特意的去选择第一个元素*/
+        .bro3~div {
+            width: 500px;
+            height: 50px;
+            border: 1px solid darkblue;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="far1">
+        far
+        <div class="bro1">
+            bro
+        </div>
+        <div class="bro2">
+            bro
+        </div>
+        <div class="bro2">
+            bro
+        </div>
+    </div>
+    <div class="bro3">
+        bro
+    </div>
+    <div class="bro4">
+        bro
+    </div>
+    <div class="bro5">
+        bro
+    </div>
+    <p>兼容性方面，除后代选择器之外，其他的层次选择器需IE7以上版本</p>
+</body>
+</html>

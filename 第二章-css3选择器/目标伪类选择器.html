@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+        }
+        a {
+            display: block;
+            background-color: cadetblue;
+            color: #fff;
+            font-size: 16px;
+            line-height: 30px;
+            height: 30px;
+            width: 160px;
+            text-align: center;
+            text-decoration: none;
+        }
+        p {
+            height: 0px;
+            width: 0px;
+            overflow: hidden;
+        }
+        /* E:target 匹配E元素，当E元素被锚点链接激活时，被相关URL所指向，响应对应样式*/
+        div:target p {
+            overflow: auto;
+            width: auto;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap1">
+        <a href="#wrap1">PressHere</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur suscipit eos, labore ut saepe accusantium error facere? In dolorum perspiciatis consequuntur repellendus architecto consequatur enim sequi necessitatibus, quam laborum fugiat!</p>
+    </div>
+    <div id="wrap2">
+        <a href="#wrap2">PressHere</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ab doloremque accusamus officiis quidem, voluptatibus sequi voluptates dolore obcaecati rerum molestiae vero itaque, quasi sed debitis fugit sit! Eaque, ad.</p>
+    </div>
+    <div id="wrap3">
+        <a href="#wrap3">PressHere</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi adipisci recusandae, assumenda ex similique! Sed quos, quo quas cupiditate rerum eveniet repudiandae quasi modi necessitatibus deleniti totam molestiae temporibus quam.</p>
+    </div>
+    <p>关于兼容性，需要IE9以上版本的支持， opera 需要9.6+</p>
+</body>
+</html>

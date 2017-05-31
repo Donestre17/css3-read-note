@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    ul li:nth-child(1) {
+        color:aqua;
+    }
+    ul li:nth-of-type(2) {
+        color:aquamarine;
+    }
+    ul li:nth-of-type(odd) {
+        background-color:floralwhite;
+    }
+    ul li:nth-last-child(1) {
+        color:brown;
+    }
+    ul li:nth-last-of-type(2) {
+        color:chocolate;
+    }
+    /*匹配父元素只有一个子元素的情况*/
+    ul li:only-child {
+        color:cornflowerblue;
+    }
+    /*:empty 匹配没有子节点的元素（包括文字节点）*/
+    ul li:empty {
+        height: 22px;
+        background-color:darkgreen;
+    }
+    /*:root 匹配html文档，不需要前置元素*/
+    :root {
+        font-size: 20px;
+    }
+</style>
+<body>
+    <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+        <li>06</li>
+    </ul>
+    <ul>
+        <li>01</li>
+    </ul>
+    <ul>
+        <li></li>
+    </ul>
+    <p>关于结构伪类选择器中的n值，可以为数字，也可以为关键字（odd,even），也可以是表达式，但n的起始值不同与其他编程语言，是从1开始的（表达式中的n起始值是从0开始）</p>
+    <p>关于兼容性，需要IE9以上的版本</p>
+</body>
+</html>

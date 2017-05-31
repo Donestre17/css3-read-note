@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态伪类选择器</title>
+    <style>
+        /*E:link 匹配E元素，且E的超链接未被访问过*/
+        .link:link {
+            color: #000;
+        }
+        /*E:visited 匹配E元素，且E的超链接已被访问过*/
+        .visited:visited {
+            color: darkgoldenrod;
+        }
+        /*E:active 匹配E元素，且匹配元素是被激活的，常用语锚点或按钮上 即按下时呈现的样式*/
+        .active:active {
+            color: coral;
+        }
+        /*E:hover 匹配E元素，当匹配元素发生鼠标滑过事件时响应对应样式*/
+        .hover:hover {
+            font-size: 26px;
+        }
+        /*E:focus 匹配E元素，当匹配元素获得焦点时，响应对应样式*/
+        .focus:focus {
+            font-size: 26px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="link">链接伪类选择器:link</a>
+    <a href="#" class="visited">链接伪类选择器:visited</a>
+    <a href="#" class="active">用户行为伪类选择器:active</a>
+    <a href="#" class="hover">用户行为伪类选择器:hover</a>
+    <input type="text" class="focus" value="用户行为伪类选择器:focus"/>
+    <p>关于兼容性，:active 和 :focus 都需要IE8以上版本支持，且 :hover 在IE6版本中仅对锚点链接起作用</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    ul>li {
+        height: 30px;
+        font-size: 22px;
+        line-height: 30px;
+        background-color: floralwhite;
+    }
+    /*E:not(F) 匹配所有E元素中除了F的元素*/
+    ul li:not(.not) {
+        text-align: center;
+        color: rebeccapurple;
+    }
+</style>
+<body>
+    <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li class="not">not</li>
+        <li>04</li>
+    </ul>
+    <p>关于兼容系，需要IE9以上的版本</p>
+</body>
+</html>

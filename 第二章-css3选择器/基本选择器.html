@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本选择器</title>
+    <style>
+        /* * 通配符，选择文档中所有的html元素*/
+        * {
+            background-color: #ccc;
+        }
+        /* E 元素选择器，选择文档中匹配的html元素*/
+        p {
+            width: 500px;
+            height: 60px;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 60px;
+            font-size: 20px;
+        }
+        /* #id ID 选择器，选择文档中匹配对应 ID 的元素，整个 html 文档中，每个 ID 只能出现一次*/
+        #box {
+            width: 500px;
+            padding: 50px;
+            border: 1px dashed #000;
+        }
+        /* .class 类选择器，选择文档中匹配对应 class 的元素  tips:IE6 不支持多类名选择器，只对最后一个类名起作用*/
+        .clazz {
+            border-color: #fff;
+        }
+        /* selector1,selector2 群组选择器，选择文档中所有匹配对应选择器的元素*/
+        #para,.para {
+            border-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p class="clazz">类</p>
+        <p class="clazz">类</p>
+        <p id="para">群组</p>
+        <p class="para">群组</p>
+        <p></p>
+    </div>
+</body>
+</html>
