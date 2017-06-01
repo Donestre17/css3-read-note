@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .text::first-letter {
+            font-size: 40px;
+            float: left;
+            padding: 3px 12px 0px 3px;
+        }
+
+        .text::first-line {
+            font-style: italic;
+            color: goldenrod;
+        }
+        /*::before 和 ::after 与css时期的伪类 :before 和 :after 相同，不是存在于标记中的内容，而是可以插入额外内容的位置*/
+
+        .text::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            display: block;
+            background-color: darkkhaki;
+            border-radius: 50%;
+        }
+
+        .text::before {
+            content: "";
+            position: absolute;
+            font-size: 20px;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            display: block;
+            background-color: darkkhaki;
+            border-radius: 50%;
+            opacity: .5;
+        }
+
+        a::after {
+            content: " ("attr(href)")"
+        }
+        /*::selection 仅接收两个属性，bgc和color*/
+        ::selection {
+            background-color: plum;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <p>伪元素用于定位文档中包含的文本，但无法在文档中定位。为了与伪类区分，使用::</p>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus assumenda fugiat totam, dolorem ea iste at soluta!
+        Consequatur architecto optio repudiandae ex eos enim dolore tenetur laborum. Velit, impedit, veniam.Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Accusantium tempora magnam eos sequi iure aut suscipit, libero facilis, temporibus
+        repudiandae excepturi molestias aspernatur cumque vitae minus voluptatem corporis voluptate dolor.Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. At aperiam explicabo illum obcaecati accusantium hic illo eligendi optio
+        nihil facere quidem quisquam consequuntur natus, magni totam, minus, esse asperiores earum!</p>
+    <a href="https://www.baidu.com">百度</a>
+    <p>关于兼容性，在IE6~8的版本中支持单:的模式，之后的版本支持双:且添加了 ::selection </p>
+</body>
+
+</html>

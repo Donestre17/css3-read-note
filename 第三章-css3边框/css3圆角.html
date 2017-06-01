@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+            border: 10px solid #000;
+            margin-bottom: 20px;
+        }
+        /*
+            当 border-radius 的值小于或等于边框宽度，内边不会呈现圆角。
+        */
+        .div2 {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px/10px;
+            border: 10px solid #000;
+        }
+        /*
+            border-radius 可为x/y的格式，其中x为圆角水平半径，y为圆角垂直半径
+        */
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <p>关于兼容性，需要IE9以上版本的支持</p>
+</body>
+</html>

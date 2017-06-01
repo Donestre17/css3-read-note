@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*匹配所有有 para 属性的 p 标签*/
+        p[para] {
+            font-size: 20px;
+            color: dimgrey;
+        }
+        /*匹配有 para 属性且属性值开头为p的 p 标签*/
+        p[para^=p] {
+            border: 1px solid #000;
+            padding-left: 15px;
+        }
+        /*匹配有 para 属性且属性值结尾为a1的 p 标签*/
+        p[para$=a1] {
+            background-color: darkcyan;
+            color: #fff;
+        }
+        /*匹配有 para 属性且属性值中包含为ara的 p 标签*/
+        p[para*=ara] {
+            line-height: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>E[attr] 通过元素标签上的属性，匹配拥有attr的E元素</p>
+    <p para="para1">para1</p>
+    <p para="para2">para2</p>
+    <p para="para3">para3</p>
+    <p>除了 ^ , $ , * 这些通配符外，还有|（匹配以val和val-开头）和~（匹配属性值中包含val且val前后为空格）</p>
+    <p>关于兼容性，需要IE7以上的版本支持</p>
+</body>
+</html>
