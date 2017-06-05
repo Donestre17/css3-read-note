@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 800px;
+            height: 800px;
+            margin-bottom: 20px;
+            background-color: #ccc;
+            padding: 20px;
+            border: 10px dotted #000;
+            background-image: url('img/img.jpg');
+            background-size: 80% 80%;
+            /*
+                cover:图片包裹容器
+                contain:容器包含图片
+            */
+            background-origin: border-box;
+            /*background-origin 设置绘制背景的起点，padding-box 为默认*/
+            background-clip: padding-box;
+            font-size: 40px;
+            
+            /*background-clip 设置容器对背景的裁切区域.在webkit内核下，拥有text属性，将图片作为文本的背景*/
+            /*-webkit-background-clip:text;
+            -webkit-text-fill-color: transparent;*/
+            /*background: url('img/img.jpg') no-repeat center 50% fixed content-box;*/
+            /*background: url() no-repeat left top cover fixed clip orign*/
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam qui, ex vitae ipsum ea consequatur iste saepe! Qui, inventore distinctio eum est. Atque necessitatibus vel praesentium inventore at sed soluta?</div>
+    <p>关于兼容性，需要IE9以上的版本支持</p>
+</body>
+</html>

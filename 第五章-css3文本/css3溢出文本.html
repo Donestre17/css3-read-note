@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .p1 {
+            width: 300px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .p2 {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+            line-height: 25px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient:vertical;
+            
+            -webkit-line-clamp:8;
+            /*
+                多行文本省略，在webkit内核浏览器中，需要使用 display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:number;
+                将对象元素转换为弹性伸缩盒子模型，确定其子元素排列模式，然后限定区块内文本显示行数。注意使用行高确定区块内显示行数与设定行数相同
+            */
+        }
+    </style>
+</head>
+<body>
+    <p class="p1">单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本</p>
+    <p class="p2">多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本多行文本</p>
+</body>
+</html>

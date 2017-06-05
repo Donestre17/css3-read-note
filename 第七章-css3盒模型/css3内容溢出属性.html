@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 200px;
+            float: left;
+            margin: 20px;
+            border: 1px solid #000;
+            word-break: break-all;
+        }
+        /*相比 css2.1 ，css3 新增了对单个方向的 overflow 属性，即 overflow-x 和 overflow-y */
+        /*默认值，不对内容进行裁切*/
+        .box1 {
+            overflow-y:visible;
+        }
+        /*根据内容自动处理，若超出容器则显示滚动条*/
+        .box2 {
+            overflow-y:auto; 
+        }
+        /*若内容超出则裁切掉*/
+        .box3 {
+            overflow-y:hidden; 
+        }
+        /*无论内容是否超出，都显示滚动条*/
+        .box4 {
+            overflow-y:scroll; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box1">1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+    <div class="box2">1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+    <div class="box3">1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+    <div class="box4">11111111111111111111111111111111111</div>
+</body>
+</html>
